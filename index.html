@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SariLoka.id - Toko Skincare</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">SariLoka.id</div>
+
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Produk</a>
+      <a href="#">Tentang</a>
+    </nav>
+
+    <div class="header-right">
+      <input type="text" id="search" placeholder="Cari skincare...">
+      <div class="cart-icon" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+      </div>
+    </div>
+  </header>
+  <!-- SECTION HERO -->
+  <section class="hero">
+    <div class="hero-content">
+    </div>
+  </section>
+  
+  <!--MENU KATEGORI -->
+    <section class="kategori-menu">
+        <button onclick="filterKategori('Semua')">Semua</button>
+        <button onclick="filterKategori('Facial Wash')">Facial Wash</button>
+        <button onclick="filterKategori('Toner')">Toner</button>
+        <button onclick="filterKategori('Sunscreen')">Sunscreen</button>
+        <button onclick="filterKategori('Moisturizer')">Moisturizer</button>
+        <button onclick="filterKategori('Serum')">Serum</button>
+    </section>
+
+    <!-- PRODUK LIST -->
+    <section class="produk-list" id="produk-list"></section>
+
+    <div id="productDetailModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeDetail()">&times;</span>
+
+    <div class="detail-top">
+      <div class="detail-left">
+        <img id="detail-img" src="">
+        <div class="detail-bottom">
+          <p id="detail-deskripsi"></p>
+          <ul id="detail-spesifikasi"></ul>
+        </div>
+      </div>
+
+      <div class="detail-right">
+        <h3 id="detail-nama"></h3>
+        <p class="price" id="detail-harga"></p>
+        <div class="qty-control">
+          <button onclick="ubahQtyProdukDetail(-1)">-</button>
+          <span id="qty-detail">1</span>
+          <button onclick="ubahQtyProdukDetail(1)">+</button>
+        </div>
+        <button class="add-cart" onclick="tambahKeKeranjangDetail()">Tambah ke Keranjang</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- CART POPUP -->
+  <div class="cart-popup" id="cartPopup">
+    <h3>Keranjang</h3>
+    <div id="cart-items"></div>
+    <p id="cart-total"></p>
+    <button onclick="checkout()">Checkout</button>
+  </div>
+
+  <p id="ongkir-info"></p>
+</div>
+
+  <!-- PRODUK LIST -->
+  <main>
+    <div id="produk-list" class="produk-list"></div>
+  </main>
+
+  <!-- SECTION KEUNGGULAN-->
+<section class="keunggulan">
+  <h2>Kenapa SariLoka.id ?</h2>
+  <p class="sub">Kami menghadirkan skincare terbaik untuk perawatan harianmu</p>
+
+  <div class="keunggulan-list">
+    <div class="unggul">
+      🌿
+      <h4>Bahan Alami</h4>
+      <p>Dipilih dari bahan alami berkualitas tinggi</p>
+    </div>
+
+    <div class="unggul">
+      🧴
+      <h4>Aman Digunakan</h4>
+      <p>Cocok untuk semua jenis kulit</p>
+    </div>
+
+    <div class="unggul">
+      💖
+      <h4>Perawatan Harian</h4>
+      <p>Ringan & nyaman digunakan setiap hari</p>
+    </div>
+
+    <div class="unggul">
+      🇮🇩
+      <h4>Produk Lokal</h4>
+      <p>Mendukung brand lokal Indonesia</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION FOOTER -->
+ <!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-brand">
+      <h3>SariLoka.id</h3>
+      <p>Skincare lokal berkualitas untuk perawatan harian kulitmu.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Menu</h4>
+      <a href="#">Home</a>
+      <a href="#">Produk</a>
+      <a href="about.html">Tentang Kami</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Kontak</h4>
+      <p>📍 Indonesia</p>
+      <p>📧 support@sariloka.id</p>
+      <p>📱 0812-3456-7890</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 SariLoka.id • All Rights Reserved
+  </div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
