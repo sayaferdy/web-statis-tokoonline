@@ -5,6 +5,9 @@ Website statis toko online ini dibuat menggunakan HTML, CSS, dan JavaScript.
 ## Cara Menjalankan
 Buka `index.html` di browser.
 
+## LINK DEMO
+https://sayaferdy.github.io/web-statis-tokoonline/
+
 ## Fitur
 - Navigasi sederhana
 - Styling dasar
