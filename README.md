@@ -22,12 +22,6 @@ Buka `index.html` di browser favorit kamu.
 
 ---
 
-## Screenshot
-![Homepage](assets/images/screenshot-homepage.png)
-> Ganti path gambar sesuai screenshot kamu
-
----
-
 ## Fitur
 - Navigasi sederhana
 - Styling dasar
